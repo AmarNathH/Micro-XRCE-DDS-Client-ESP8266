@@ -6,3 +6,5 @@ Tested for NODE MCU 0.9 (ESP-12E Module) using the PlatformIO VS Code Extension.
 You can change the config for Micro XRCE DDS from the ```config.h``` file, the project uses the ```PLATFORM_NAME_ESP8266``` macro defination, to compile the functions and files necessary for the ESP8266.
 
 **Iniital development of library done, UDP and Discovery functions are now implemented. Some bugs still exists, feel free to use the library and contribute :)**
+
+**Known Issues** : There is a need to make a copy of the IP Address after Discovery, as there is a possible case of dangling pointer. Current workaround is by taking a copy of IP address by using ```strdup()``` function.
